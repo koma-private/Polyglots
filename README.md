@@ -1,3 +1,3 @@
 # Sample polyglot scripts
 
-PSWrapper.cmd : A polyglot of batch script & PowerShell
+PSWrapper.cmd : Sample of a batch file wrapper for a PowerShell script
