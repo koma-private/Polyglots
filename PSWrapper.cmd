@@ -12,7 +12,7 @@
 
 <#
   This is a generic batch file wrapper for a Powershell script
-  and enable the PowerShell script to be executed even if the ExecutionPolicy is configured as "Restricted".
+  and enables the PowerShell script to be executed even if the ExecutionPolicy is configured as "Restricted".
 
   This wrapper is a modified version of Dave Amenta's code.
   For the original source code, refer his post. [*1]
@@ -28,7 +28,7 @@ $ErrorActionPreference = "stop"
 Add-Type -AssemblyName System.Windows.Forms
 
 
-function Main
+function main
 {
   $script:selfPath = [environment]::GetEnvironmentVariable("PS_WRAPPER_PATH")
   $script:cmdPid = (gwmi win32_process -Filter "processid='$pid'").parentprocessid
@@ -74,7 +74,7 @@ function msgboxInfo
 }
 
 
-Main
+main
 
 
 }.Invoke($args)
